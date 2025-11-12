@@ -4,7 +4,7 @@ import pandas as pd
 
 
 st.set_page_config(page_title="Аналіз Математичних Олімпіад", layout="wide")
-st.title("Дашборд-аналіз Математичних Олімпіад УМО")
+st.title("Дашборд-аналіз Математичних Олімпіад")
 
 
 @st.cache_data
