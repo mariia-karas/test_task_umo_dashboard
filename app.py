@@ -13,7 +13,7 @@ def load_data(filepath):
         df = pd.read_csv(filepath)
         return df
     except FileNotFoundError:
-        st.error(f"Файл '{filepath}' не знайдено. Будь ласка, завантажте його у Colab.")
+        st.error(f"Файл '{filepath}' не знайдено.")
         return None
 
 df = load_data("umo_data_raw.csv")
