@@ -4,7 +4,7 @@ import pandas as pd
 
 
 st.set_page_config(page_title="Аналіз Математичних Олімпіад", layout="wide")
-st.title("🏆 Дашборд-аналіз Олімпіад УМО")
+st.title("Дашборд-аналіз Математичних Олімпіад УМО")
 
 
 @st.cache_data
@@ -22,6 +22,7 @@ if df is not None:
     st.header("Огляд даних")
     st.dataframe(df.head(10))
 
+    #створення фільтрів
     st.sidebar.header("Фільтри ")
 
     unique_years = sorted(df['Рік'].unique(), reverse=True)
@@ -30,7 +31,6 @@ if df is not None:
     unique_teams = sorted(df['Команда'].unique())
     selected_team = st.sidebar.selectbox("Оберіть команду:", ["Всі команди"] + unique_teams)
 
-  
     df_filtered = df[df['Рік'] == selected_year]
 
     if selected_team != "Всі команди":
